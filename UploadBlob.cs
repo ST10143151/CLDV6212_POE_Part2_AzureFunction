@@ -6,7 +6,7 @@ using Microsoft.Extensions.Logging;
 using System.IO;
 using System.Threading.Tasks;
 
-namespace ST10114423.Functions
+namespace CLDV6212.Functions
 {
     public static class UploadBlob
     {
@@ -15,8 +15,8 @@ namespace ST10114423.Functions
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = null)] HttpRequest req,
             ILogger log)
         {
-            string containerName = req.Query["containerName"];
-            string blobName = req.Query["blobName"];
+            string containerName = req.Query["st10143151storage"];
+            string blobName = req.Query["products"];
 
             if (string.IsNullOrEmpty(containerName) || string.IsNullOrEmpty(blobName))
             {

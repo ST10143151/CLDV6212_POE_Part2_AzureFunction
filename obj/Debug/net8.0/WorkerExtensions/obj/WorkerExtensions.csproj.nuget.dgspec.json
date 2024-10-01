@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/anantareddy/AzureFunctions1/obj/Debug/net8.0/WorkerExtensions/WorkerExtensions.csproj": {}
+    "/Users/anantareddy/VS Code Files/CLDV6212_POE_Part2_AzureFunction/obj/Debug/net8.0/WorkerExtensions/WorkerExtensions.csproj": {}
   },
   "projects": {
-    "/Users/anantareddy/AzureFunctions1/obj/Debug/net8.0/WorkerExtensions/WorkerExtensions.csproj": {
+    "/Users/anantareddy/VS Code Files/CLDV6212_POE_Part2_AzureFunction/obj/Debug/net8.0/WorkerExtensions/WorkerExtensions.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/anantareddy/AzureFunctions1/obj/Debug/net8.0/WorkerExtensions/WorkerExtensions.csproj",
+        "projectUniqueName": "/Users/anantareddy/VS Code Files/CLDV6212_POE_Part2_AzureFunction/obj/Debug/net8.0/WorkerExtensions/WorkerExtensions.csproj",
         "projectName": "Microsoft.Azure.Functions.Worker.Extensions",
-        "projectPath": "/Users/anantareddy/AzureFunctions1/obj/Debug/net8.0/WorkerExtensions/WorkerExtensions.csproj",
+        "projectPath": "/Users/anantareddy/VS Code Files/CLDV6212_POE_Part2_AzureFunction/obj/Debug/net8.0/WorkerExtensions/WorkerExtensions.csproj",
         "packagesPath": "/Users/anantareddy/.nuget/packages/",
-        "outputPath": "/Users/anantareddy/AzureFunctions1/obj/Debug/net8.0/WorkerExtensions/obj/",
+        "outputPath": "/Users/anantareddy/VS Code Files/CLDV6212_POE_Part2_AzureFunction/obj/Debug/net8.0/WorkerExtensions/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/anantareddy/.nuget/NuGet/NuGet.Config"
