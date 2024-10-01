@@ -23,7 +23,14 @@ namespace CLDV6212.Functions
                 return new BadRequestObjectResult("Share name and file name must be provided.");
             }
 
-            var connectionString = Environment.GetEnvironmentVariable("AzureStorage:ConnectionString");
+            // Get the connection string from environment variables
+            var connectionString = Environment.GetEnvironmentVariable("AzureStorageConnectionString");
+            if (string.IsNullOrEmpty(connectionString))
+            {
+                log.LogError("Azure storage connection string is not set.");
+                return new StatusCodeResult(StatusCodes.Status500InternalServerError);
+            }
+
             var shareServiceClient = new ShareServiceClient(connectionString);
             var shareClient = shareServiceClient.GetShareClient(shareName);
             await shareClient.CreateIfNotExistsAsync();

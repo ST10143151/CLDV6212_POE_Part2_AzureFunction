@@ -5579,11 +5579,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/anantareddy/AzureFunctions1/AzureFunctions1.csproj",
+      "projectUniqueName": "/Users/anantareddy/VS Code Files/CLDV6212_POE_Part2_AzureFunction/AzureFunctions1.csproj",
       "projectName": "AzureFunctions1",
-      "projectPath": "/Users/anantareddy/AzureFunctions1/AzureFunctions1.csproj",
+      "projectPath": "/Users/anantareddy/VS Code Files/CLDV6212_POE_Part2_AzureFunction/AzureFunctions1.csproj",
       "packagesPath": "/Users/anantareddy/.nuget/packages/",
-      "outputPath": "/Users/anantareddy/AzureFunctions1/obj/",
+      "outputPath": "/Users/anantareddy/VS Code Files/CLDV6212_POE_Part2_AzureFunction/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/anantareddy/.nuget/NuGet/NuGet.Config"
