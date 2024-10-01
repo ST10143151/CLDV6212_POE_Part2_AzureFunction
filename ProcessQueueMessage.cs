@@ -14,12 +14,12 @@ namespace CLDV6212.Functions
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = null)] HttpRequest req,
             ILogger log)
         {
-            string queueName = req.Query["queueName"];
+            string queueName = req.Query["orderStatuses"];
             string message = req.Query["message"];
 
             if (string.IsNullOrEmpty(queueName) || string.IsNullOrEmpty(message))
             {
-                return new BadRequestObjectResult("Queue name and message must be provided.");
+                return new BadRequestObjectResult("Queue name and message must be given please.");
             }
 
             var connectionString = Environment.GetEnvironmentVariable("AzureStorage:ConnectionString");
@@ -28,7 +28,7 @@ namespace CLDV6212.Functions
             await queueClient.CreateIfNotExistsAsync();
             await queueClient.SendMessageAsync(message);
 
-            return new OkObjectResult("Message added to queue");
+            return new OkObjectResult("Message is successfully added to queue");
         }
     }
 }

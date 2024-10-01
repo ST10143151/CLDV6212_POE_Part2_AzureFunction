@@ -14,14 +14,14 @@ namespace CLDV6212.Functions
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = null)] HttpRequest req,
             ILogger log)
         {
-            string tableName = req.Query["tableName"];
+            string tableName = req.Query["customers"];
             string partitionKey = req.Query["partitionKey"];
             string rowKey = req.Query["rowKey"];
             string data = req.Query["data"];
 
             if (string.IsNullOrEmpty(tableName) || string.IsNullOrEmpty(partitionKey) || string.IsNullOrEmpty(rowKey) || string.IsNullOrEmpty(data))
             {
-                return new BadRequestObjectResult("Table name, partition key, row key, and data must be provided.");
+                return new BadRequestObjectResult("Table name, partition key, row key, and data should be given.");
             }
 
             var connectionString = Environment.GetEnvironmentVariable("AzureStorage:ConnectionString");
@@ -32,7 +32,7 @@ namespace CLDV6212.Functions
             var entity = new TableEntity(partitionKey, rowKey) { ["Data"] = data };
             await tableClient.AddEntityAsync(entity);
 
-            return new OkObjectResult("Data added to table");
+            return new OkObjectResult("Data is added to the table");
         }
     }
 }

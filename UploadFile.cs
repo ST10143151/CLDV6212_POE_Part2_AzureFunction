@@ -20,14 +20,14 @@ namespace CLDV6212.Functions
 
             if (string.IsNullOrEmpty(shareName) || string.IsNullOrEmpty(fileName))
             {
-                return new BadRequestObjectResult("Share name and file name must be provided.");
+                return new BadRequestObjectResult("Share name and file name must be given correctly.");
             }
 
             // Get the connection string from environment variables
             var connectionString = Environment.GetEnvironmentVariable("AzureStorageConnectionString");
             if (string.IsNullOrEmpty(connectionString))
             {
-                log.LogError("Azure storage connection string is not set.");
+                log.LogError("Azure storage connection string is not set correctly.");
                 return new StatusCodeResult(StatusCodes.Status500InternalServerError);
             }
 
@@ -41,7 +41,7 @@ namespace CLDV6212.Functions
             await fileClient.CreateAsync(stream.Length);
             await fileClient.UploadAsync(stream);
 
-            return new OkObjectResult("File uploaded to Azure Files");
+            return new OkObjectResult("File uploaded is successfully uploaded to Azure Files");
         }
     }
 }

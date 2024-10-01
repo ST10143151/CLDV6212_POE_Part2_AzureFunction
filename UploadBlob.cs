@@ -20,7 +20,7 @@ namespace CLDV6212.Functions
 
             if (string.IsNullOrEmpty(containerName) || string.IsNullOrEmpty(blobName))
             {
-                return new BadRequestObjectResult("Container name and blob name must be provided.");
+                return new BadRequestObjectResult("Container name and blob name must be correctly given.");
             }
 
             var connectionString = Environment.GetEnvironmentVariable("AzureStorage:ConnectionString");
@@ -32,7 +32,7 @@ namespace CLDV6212.Functions
             using var stream = req.Body;
             await blobClient.UploadAsync(stream, true);
 
-            return new OkObjectResult("Blob uploaded");
+            return new OkObjectResult("Blob uploaded successfully");
         }
     }
 }
